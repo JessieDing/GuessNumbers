@@ -1,20 +1,27 @@
 package com.jessie;
 
 
-import java.util.HashSet;
 import java.util.Random;
-import java.util.Set;
 
 public class RandomNumGenerator {
-    private String RandomNum = "";
+    private String randomNum = "";
     private static final int SIZE = 4;
 
-    public Set<Integer> generate() {
-        Set<Integer> numberSet = new HashSet<>();
+    public String getRandomNum() {
+        Random random = new Random();
         int n = 0;
         while (n < SIZE) {
-            numberSet.add(new Random().nextInt(10));
+            String temp = "";
+            int i = random.nextInt(10);
+            temp += (char)('0' + i);
+            if (!randomNum.contains(temp)){
+                randomNum+=(char)('0'+i);
+                n++;
+            }
         }
-        return numberSet;
+        return"";
+    }
+    public int getSize() {       // ???为什么getSize
+        return SIZE;
     }
 }

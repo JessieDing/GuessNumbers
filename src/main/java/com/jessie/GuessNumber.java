@@ -1,28 +1,35 @@
 package com.jessie;
 
 
-public class GuessNumber {
-    private int a = 0;
-    private int b = 0;
-    // RandomNumGenerator randomNumGenerator = new RandomNumGenerator();
+import java.util.Objects;
 
-    public String getResult(String randomNum, String inputNum) {
-        int a = 0;
-        int b = 0;
-        for (int i = 0; i < 4; i++) {
-            if (randomNum.charAt(i) == inputNum.charAt(i)) {
-                a++;
+public class GuessNumber {
+    private int A = 0;
+    private int B = 0;
+    RandomNumGenerator randomNumGenerator = new RandomNumGenerator();
+    int size = randomNumGenerator.getSize();
+
+    public void getResult(String randomNum, String inputNum) {  //？？？返回值为什么不是String
+        A = 0;
+        B = 0;
+        for (int i = 0; i < size; i++) {
+            if (Objects.equals(inputNum.charAt(i), randomNum.charAt(i))) {
+                A++;
             }
         }
-        for (int j = 0; j < 4; j++) {
-            for (int k = 0; k < 4; k++) {
-                if (randomNum.charAt(j) == inputNum.charAt(k)) {
-                    b++;
+        for (int j = 0; j < size; j++) {
+            for (int k = 0; k < size; k++) {
+                if (Objects.equals(inputNum.charAt(j), randomNum.charAt(k))) {
+                    B++;
+                    break;  //???为什么要用break
                 }
             }
         }
-        b -= a;
-        System.out.println(a+"A"+b+"B");
-        return "";
+        B -= A;
+        System.out.println(A + "A" + B + "B");
+    }
+
+    public int getA() {   //???为什么要getA
+        return A;
     }
 }
