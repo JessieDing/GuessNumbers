@@ -33,24 +33,3 @@ public class Application {
         }
     }
 }
-//        RandomNumGenerator randomNumGenerator = new RandomNumGenerator();
-//        String randomNumber = String.valueOf(randomNumGenerator.generate());
-//        for (int i = 0; i < 6; i++) {
-//            System.out.println("请输入四个数字（0到9）：");
-//
-//            Input input = new Input();
-//            String inputNumber;
-//            inputNumber = input.readInput();
-//            String[] splitString = inputNumber.split("");
-//            Arrays.sort(splitString);
-//            for (int j = 1; j < splitString.length; j++) {
-//                if (Objects.equals(splitString[j], splitString[j - 1]) || splitString.length != 4) {
-//                    System.out.println("输入不正确，请重新输入：");
-//                }
-//                    GuessNumber guessNumber = new GuessNumber();
-//                    guessNumber.getResult(randomNumber, inputNumber);
-
-//            }
-//
-//
-//        }
