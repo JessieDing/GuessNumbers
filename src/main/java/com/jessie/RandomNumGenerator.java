@@ -4,8 +4,9 @@ package com.jessie;
 import java.util.Random;
 
 public class RandomNumGenerator {
-    private String randomNum = "";
     private static final int SIZE = 4;
+
+    private String randomNum = "";
 
     public String getRandomNum() {
         Random random = new Random();
@@ -21,7 +22,8 @@ public class RandomNumGenerator {
         }
         return"";
     }
-    public int getSize() {       // ???为什么getSize
+
+    public int getSize() {       // ???为什么getSize，因为外面拿不到size，SIZE是private的
         return SIZE;
     }
 }
