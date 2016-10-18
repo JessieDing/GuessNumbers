@@ -3,11 +3,11 @@ package com.jessie;
 
 import java.util.Objects;
 
-public class GuessNumber {
+public class GuessNumber_old {
     private int A = 0;
     private int B = 0;
-    RandomNumGenerator randomNumGenerator = new RandomNumGenerator();
-    int size = randomNumGenerator.getSize();
+    RandomNumGenerator_old randomNumGeneratorOld = new RandomNumGenerator_old();
+    int size = randomNumGeneratorOld.getSize();
 
     public void getResult(String randomNum, String inputNum) {  //？？？返回值为什么不是String
         A = 0;

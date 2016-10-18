@@ -3,7 +3,7 @@ package com.jessie;
 
 import java.util.Random;
 
-public class RandomNumGenerator {
+public class RandomNumGenerator_old {
     private static final int SIZE = 4;
 
     private String randomNum = "";
