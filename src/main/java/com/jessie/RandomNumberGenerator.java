@@ -1,17 +1,22 @@
 package com.jessie;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 
 public class RandomNumberGenerator {
     public List<String> generate() {
         Random random = new Random();
-        Set<String> numberSet = new HashSet<>();
-        while (numberSet.size() < 4) {
+        List<String> numbers = new ArrayList<>();
+        while (numbers.size() < 4) {
             int index = random.nextInt(10);
-            numberSet.add(String.valueOf(index));
+            if (!numbers.contains(String.valueOf(index))) {
+                numbers.add(String.valueOf(index));
+            }
         }
-        return new ArrayList<>(numberSet);
+        return numbers;
     }
 }
+
